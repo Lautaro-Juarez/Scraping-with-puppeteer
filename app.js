@@ -5,6 +5,11 @@ const base = async () => {
     headless: false,
     slowMo: 700,
   });
+  await page.setViewport({
+    width: 1600,
+    height: 1000,
+    deviceScaleFactor: 1,
+  });
   const page = await browser.newPage();
 
   return { page, browser };
@@ -80,4 +85,3 @@ const handleDynamicWebPage = async () => {
 };
 
 //handleDynamicWebPage();
-
